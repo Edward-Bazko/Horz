@@ -1,16 +1,12 @@
-//
-//  ContentView.swift
-//  Timer
-//
-//  Created by Edward Bazko on 31/01/2021.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
         Text("Hello, world!")
             .padding()
+            .onAppear {
+                ScheduleRequest.shared.requestSchedule()
+            }
     }
 }
 

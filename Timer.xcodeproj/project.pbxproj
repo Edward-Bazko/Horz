@@ -11,15 +11,19 @@
 		0B38781D25C72C0F00ABCB71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38781C25C72C0F00ABCB71 /* ContentView.swift */; };
 		0B38781F25C72C1200ABCB71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B38781E25C72C1200ABCB71 /* Assets.xcassets */; };
 		0B38782225C72C1200ABCB71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B38782125C72C1200ABCB71 /* Preview Assets.xcassets */; };
+		0B38782B25C72C3B00ABCB71 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38782A25C72C3B00ABCB71 /* Schedule.swift */; };
+		0B38782F25C7334700ABCB71 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38782E25C7334700ABCB71 /* Notifications.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B38781725C72C0F00ABCB71 /* Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B38781725C72C0F00ABCB71 /* Horz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Horz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B38781A25C72C0F00ABCB71 /* TimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerApp.swift; sourceTree = "<group>"; };
 		0B38781C25C72C0F00ABCB71 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0B38781E25C72C1200ABCB71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B38782125C72C1200ABCB71 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0B38782325C72C1200ABCB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B38782A25C72C3B00ABCB71 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		0B38782E25C7334700ABCB71 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +48,7 @@
 		0B38781825C72C0F00ABCB71 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0B38781725C72C0F00ABCB71 /* Timer.app */,
+				0B38781725C72C0F00ABCB71 /* Horz.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,6 +58,8 @@
 			children = (
 				0B38781A25C72C0F00ABCB71 /* TimerApp.swift */,
 				0B38781C25C72C0F00ABCB71 /* ContentView.swift */,
+				0B38782A25C72C3B00ABCB71 /* Schedule.swift */,
+				0B38782E25C7334700ABCB71 /* Notifications.swift */,
 				0B38781E25C72C1200ABCB71 /* Assets.xcassets */,
 				0B38782325C72C1200ABCB71 /* Info.plist */,
 				0B38782025C72C1200ABCB71 /* Preview Content */,
@@ -72,9 +78,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0B38781625C72C0F00ABCB71 /* Timer */ = {
+		0B38781625C72C0F00ABCB71 /* Horz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0B38782625C72C1200ABCB71 /* Build configuration list for PBXNativeTarget "Timer" */;
+			buildConfigurationList = 0B38782625C72C1200ABCB71 /* Build configuration list for PBXNativeTarget "Horz" */;
 			buildPhases = (
 				0B38781325C72C0F00ABCB71 /* Sources */,
 				0B38781425C72C0F00ABCB71 /* Frameworks */,
@@ -84,9 +90,9 @@
 			);
 			dependencies = (
 			);
-			name = Timer;
+			name = Horz;
 			productName = Timer;
-			productReference = 0B38781725C72C0F00ABCB71 /* Timer.app */;
+			productReference = 0B38781725C72C0F00ABCB71 /* Horz.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -116,7 +122,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0B38781625C72C0F00ABCB71 /* Timer */,
+				0B38781625C72C0F00ABCB71 /* Horz */,
 			);
 		};
 /* End PBXProject section */
@@ -138,6 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B38782F25C7334700ABCB71 /* Notifications.swift in Sources */,
+				0B38782B25C72C3B00ABCB71 /* Schedule.swift in Sources */,
 				0B38781D25C72C0F00ABCB71 /* ContentView.swift in Sources */,
 				0B38781B25C72C0F00ABCB71 /* TimerApp.swift in Sources */,
 			);
@@ -318,7 +326,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0B38782625C72C1200ABCB71 /* Build configuration list for PBXNativeTarget "Timer" */ = {
+		0B38782625C72C1200ABCB71 /* Build configuration list for PBXNativeTarget "Horz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0B38782725C72C1200ABCB71 /* Debug */,
