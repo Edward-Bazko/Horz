@@ -6,8 +6,11 @@ struct SessionsView: View {
     
     var body: some View {
         NavigationView {
-            if model.isLoading {
-                ProgressView("Loading")
+            if !model.notificationPermissionsGranted {
+                noPermissionsView
+            }
+            else if model.isLoading {
+                ProgressView("Loading Sessions")
             }
             else {
                 List {
@@ -19,6 +22,18 @@ struct SessionsView: View {
                 .navigationBarTitle("Sessions")
             }
         }
+    }
+    
+    var noPermissionsView: some View {
+        VStack {
+            Text("The notification permission was not authorized. Please enable it in Settings to continue")
+                .multilineTextAlignment(.center)
+                .padding()
+            
+            Button("Open Settings", action: { model.openSystemSettings() })
+                .padding()
+        }
+        .padding()
     }
 }
 

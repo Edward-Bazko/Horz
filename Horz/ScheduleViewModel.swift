@@ -21,6 +21,7 @@ class ScheduleViewModel: ObservableObject {
     
     @Published var isSessionRunning = false
     @Published var isLoading = false
+    @Published var notificationPermissionsGranted = false
     
     @Published var schedule = Schedule(sessions: []) {
         didSet {
@@ -35,8 +36,23 @@ class ScheduleViewModel: ObservableObject {
     }
     
     init() {
-        notifications.requestAuthorization()
-        
+        NotificationCenter.default
+            .publisher(for: UIApplication.willEnterForegroundNotification)
+            .sink { [unowned self] _ in verifyAuthorization() }
+            .store(in: &observers)
+    }
+    
+    func verifyAuthorization() {
+        notifications.requestAuthorization { [weak self] isGranted in
+            guard let self = self else { return }
+            self.notificationPermissionsGranted = isGranted
+            if isGranted {
+                self.loadSchedule()
+            }
+        }
+    }
+    
+    private func loadSchedule() {
         if store.isEmpty() {
             fetch()
         }
@@ -51,6 +67,11 @@ class ScheduleViewModel: ObservableObject {
         fetch()
     }
     
+    func openSystemSettings() {
+        let settingsURL = URL(string: UIApplication.openSettingsURLString)!
+        UIApplication.shared.open(settingsURL)
+    }
+    
     private func fetch() {
         isLoading = true
         fetcher.fetchSchedule { [unowned self] schedule in
@@ -59,4 +80,6 @@ class ScheduleViewModel: ObservableObject {
             isLoading = false
         }
     }
+    
+    private var observers = Set<AnyCancellable>()
 }

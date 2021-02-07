@@ -3,12 +3,19 @@ import UserNotifications
 
 class Notifications {
     private let notificationCenter = UNUserNotificationCenter.current()
-    private let options: UNAuthorizationOptions = [.alert, .sound, .badge]
     private let calendar = Calendar.autoupdatingCurrent
     
-    func requestAuthorization() {
-        notificationCenter.requestAuthorization(options: options) { isGranted, error in
-            print("Granted: \(isGranted) Error: \(error.debugDescription)")
+    func requestAuthorization(completion: @escaping (Bool) -> Void) {
+        notificationCenter.getNotificationSettings { [weak self] settings in
+            if settings.authorizationStatus == .authorized {
+                DispatchQueue.main.async { completion(true) }
+                return
+            }
+            
+            guard let self = self else { return }
+            self.notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { isGranted, error in
+                DispatchQueue.main.async { completion(isGranted) }
+            }
         }
     }
     
