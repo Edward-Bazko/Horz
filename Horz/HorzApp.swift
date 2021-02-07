@@ -1,11 +1,11 @@
 import SwiftUI
 
 @main
-struct TimerApp: App {
+struct HorzApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SessionsView(model: ScheduleViewModel())
         }
     }
 }

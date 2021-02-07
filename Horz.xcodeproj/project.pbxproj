@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B38781B25C72C0F00ABCB71 /* TimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38781A25C72C0F00ABCB71 /* TimerApp.swift */; };
-		0B38781D25C72C0F00ABCB71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38781C25C72C0F00ABCB71 /* ContentView.swift */; };
+		0B38781B25C72C0F00ABCB71 /* HorzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38781A25C72C0F00ABCB71 /* HorzApp.swift */; };
+		0B38781D25C72C0F00ABCB71 /* SessionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38781C25C72C0F00ABCB71 /* SessionsView.swift */; };
 		0B38781F25C72C1200ABCB71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B38781E25C72C1200ABCB71 /* Assets.xcassets */; };
 		0B38782225C72C1200ABCB71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B38782125C72C1200ABCB71 /* Preview Assets.xcassets */; };
-		0B38782B25C72C3B00ABCB71 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38782A25C72C3B00ABCB71 /* Schedule.swift */; };
+		0B38782B25C72C3B00ABCB71 /* ScheduleFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38782A25C72C3B00ABCB71 /* ScheduleFetcher.swift */; };
 		0B38782F25C7334700ABCB71 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38782E25C7334700ABCB71 /* Notifications.swift */; };
+		2B5798B425CEEA9E007C7397 /* ScheduleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5798B325CEEA9E007C7397 /* ScheduleStore.swift */; };
+		2B5798B825CEEDE5007C7397 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5798B725CEEDE5007C7397 /* ScheduleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B38781725C72C0F00ABCB71 /* Horz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Horz.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B38781A25C72C0F00ABCB71 /* TimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerApp.swift; sourceTree = "<group>"; };
-		0B38781C25C72C0F00ABCB71 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0B38781A25C72C0F00ABCB71 /* HorzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorzApp.swift; sourceTree = "<group>"; };
+		0B38781C25C72C0F00ABCB71 /* SessionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsView.swift; sourceTree = "<group>"; };
 		0B38781E25C72C1200ABCB71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B38782125C72C1200ABCB71 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0B38782325C72C1200ABCB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0B38782A25C72C3B00ABCB71 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		0B38782A25C72C3B00ABCB71 /* ScheduleFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleFetcher.swift; sourceTree = "<group>"; };
 		0B38782E25C7334700ABCB71 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		2B5798B325CEEA9E007C7397 /* ScheduleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleStore.swift; sourceTree = "<group>"; };
+		2B5798B725CEEDE5007C7397 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +44,7 @@
 		0B38780E25C72C0F00ABCB71 = {
 			isa = PBXGroup;
 			children = (
-				0B38781925C72C0F00ABCB71 /* Timer */,
+				0B38781925C72C0F00ABCB71 /* Horz */,
 				0B38781825C72C0F00ABCB71 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,18 +57,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0B38781925C72C0F00ABCB71 /* Timer */ = {
+		0B38781925C72C0F00ABCB71 /* Horz */ = {
 			isa = PBXGroup;
 			children = (
-				0B38781A25C72C0F00ABCB71 /* TimerApp.swift */,
-				0B38781C25C72C0F00ABCB71 /* ContentView.swift */,
-				0B38782A25C72C3B00ABCB71 /* Schedule.swift */,
+				0B38781A25C72C0F00ABCB71 /* HorzApp.swift */,
+				0B38781C25C72C0F00ABCB71 /* SessionsView.swift */,
+				0B38782A25C72C3B00ABCB71 /* ScheduleFetcher.swift */,
+				2B5798B725CEEDE5007C7397 /* ScheduleViewModel.swift */,
+				2B5798B325CEEA9E007C7397 /* ScheduleStore.swift */,
 				0B38782E25C7334700ABCB71 /* Notifications.swift */,
 				0B38781E25C72C1200ABCB71 /* Assets.xcassets */,
 				0B38782325C72C1200ABCB71 /* Info.plist */,
 				0B38782025C72C1200ABCB71 /* Preview Content */,
 			);
-			path = Timer;
+			path = Horz;
 			sourceTree = "<group>";
 		};
 		0B38782025C72C1200ABCB71 /* Preview Content */ = {
@@ -109,7 +115,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0B38781225C72C0F00ABCB71 /* Build configuration list for PBXProject "Timer" */;
+			buildConfigurationList = 0B38781225C72C0F00ABCB71 /* Build configuration list for PBXProject "Horz" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -145,9 +151,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B38782F25C7334700ABCB71 /* Notifications.swift in Sources */,
-				0B38782B25C72C3B00ABCB71 /* Schedule.swift in Sources */,
-				0B38781D25C72C0F00ABCB71 /* ContentView.swift in Sources */,
-				0B38781B25C72C0F00ABCB71 /* TimerApp.swift in Sources */,
+				2B5798B825CEEDE5007C7397 /* ScheduleViewModel.swift in Sources */,
+				0B38782B25C72C3B00ABCB71 /* ScheduleFetcher.swift in Sources */,
+				0B38781D25C72C0F00ABCB71 /* SessionsView.swift in Sources */,
+				2B5798B425CEEA9E007C7397 /* ScheduleStore.swift in Sources */,
+				0B38781B25C72C0F00ABCB71 /* HorzApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +213,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -260,7 +268,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -276,16 +284,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Timer/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Horz/Preview Content\"";
 				DEVELOPMENT_TEAM = KLA3MMY44C;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Timer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_FILE = Horz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.edwardbazko.Timer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.edwardbazko.Horz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -298,16 +306,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Timer/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Horz/Preview Content\"";
 				DEVELOPMENT_TEAM = KLA3MMY44C;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Timer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_FILE = Horz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.edwardbazko.Timer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.edwardbazko.Horz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,7 +325,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0B38781225C72C0F00ABCB71 /* Build configuration list for PBXProject "Timer" */ = {
+		0B38781225C72C0F00ABCB71 /* Build configuration list for PBXProject "Horz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0B38782425C72C1200ABCB71 /* Debug */,

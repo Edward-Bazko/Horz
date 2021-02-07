@@ -2,10 +2,9 @@ import Foundation
 import UserNotifications
 
 class Notifications {
-        
-    let notificationCenter = UNUserNotificationCenter.current()
-    let options: UNAuthorizationOptions = [.alert, .sound, .badge]
-    let calendar = Calendar.autoupdatingCurrent
+    private let notificationCenter = UNUserNotificationCenter.current()
+    private let options: UNAuthorizationOptions = [.alert, .sound, .badge]
+    private let calendar = Calendar.autoupdatingCurrent
     
     func requestAuthorization() {
         notificationCenter.requestAuthorization(options: options) { isGranted, error in
@@ -13,14 +12,23 @@ class Notifications {
         }
     }
     
-    func scheduleStartSession(date: Date) {
+    func schedule(_ window: Schedule.Window) {
+        scheduleStartSession(date: window.begin)
+        scheduleFinishSession(date: window.end)
+    }
+    
+    func resetScheduledSessions() {
+        notificationCenter.removeAllPendingNotificationRequests()
+    }
+    
+    private func scheduleStartSession(date: Date) {
         schedule(message: "Yo! Let's speak some English 🇬🇧💂🏻", date: date)
     }
     
-    func scheduleFinishSession(date: Date) {
-        schedule(message: "Sup! Поговорим по-русски 🪆☦️", date: date)
+    private func scheduleFinishSession(date: Date) {
+        schedule(message: "Чокаво! Поговорим по-русски 🪆☦️", date: date)
     }
-    
+        
     private func schedule(message: String, date: Date) {
         let content = UNMutableNotificationContent()
         content.title = message
@@ -29,7 +37,7 @@ class Notifications {
         
         let dateComponents = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
         
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
                 
         let request = UNNotificationRequest(identifier: UUID().uuidString,
                                             content: content,
@@ -37,13 +45,14 @@ class Notifications {
         
         notificationCenter.add(request) { error in
             if let error = error {
-                print("Failed to send request with error: \(error)")
-                return
+                print("Failed to add notification with error: \(error)")
             }
             else {
-                print("Notification scheduled")
+                print("Notification scheduled: \(request)")
             }
         }
     }
 }
+
+
 
