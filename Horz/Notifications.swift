@@ -6,6 +6,7 @@ class Notifications {
     private let calendar = Calendar.autoupdatingCurrent
     
     func requestAuthorization(completion: @escaping (Bool) -> Void) {
+        // printPendingRequests()
         notificationCenter.getNotificationSettings { [weak self] settings in
             if settings.authorizationStatus == .authorized {
                 DispatchQueue.main.async { completion(true) }
@@ -57,6 +58,12 @@ class Notifications {
             else {
                 print("Notification scheduled: \(request)")
             }
+        }
+    }
+    
+    func printPendingRequests() {
+        notificationCenter.getPendingNotificationRequests { requests in
+            print(requests)
         }
     }
 }
