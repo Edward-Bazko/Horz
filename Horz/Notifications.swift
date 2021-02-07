@@ -4,10 +4,9 @@ import UserNotifications
 class Notifications {
     private let notificationCenter = UNUserNotificationCenter.current()
     private let calendar = Calendar.autoupdatingCurrent
-    //private let quotes = QuotesStore()
+    private let quotes = QuotesStore()
     
     func requestAuthorization(completion: @escaping (Bool) -> Void) {
-        // printPendingRequests()
         notificationCenter.getNotificationSettings { [weak self] settings in
             if settings.authorizationStatus == .authorized {
                 DispatchQueue.main.async { completion(true) }
@@ -32,13 +31,13 @@ class Notifications {
     
     private func scheduleStartSession(date: Date) {
         schedule(message: "Yo! Let's speak some English 🇬🇧💂🏻",
-                 body: "", // quotes.randomEnglishQuote().text,
+                 body: quotes.randomEnglishQuote().text,
                  date: date)
     }
     
     private func scheduleFinishSession(date: Date) {
         schedule(message: "Чокаво! Поговорим по-русски 🪆☦️",
-                 body: "", //quotes.randomRussianQuote().text,
+                 body: quotes.randomRussianQuote().text,
                  date: date)
     }
         
