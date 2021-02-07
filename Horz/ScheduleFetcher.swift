@@ -30,7 +30,16 @@ class ScheduleFetcher {
 
     private var decoder: JSONDecoder {
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .iso8601
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss" // 2016-07-04T17:37:21
+        decoder.dateDecodingStrategy = .custom { decoder -> Date in
+            let container = try decoder.singleValueContainer()
+            let candidate = try container.decode(String.self)
+            if let date = formatter.date(from: candidate) {
+                return date
+            }
+            throw DecodingError.dataCorruptedError(in: container, debugDescription: "Invalid date :\(candidate)")
+        }
         return decoder
     }
 }
