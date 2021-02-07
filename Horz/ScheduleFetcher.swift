@@ -1,7 +1,11 @@
 import Foundation
 import Combine
 
-class ScheduleFetcher {
+protocol ScheduleFetching {
+    func fetchSchedule(completion: @escaping (Result<Schedule, Error>) -> Void)
+}
+
+class ScheduleFetcher: ScheduleFetching {
     private let scheduleURL = URL(string: "http://82.161.151.207:8082/schedule")!
     
     private lazy var schedulePublisher = URLSession.shared
@@ -10,18 +14,19 @@ class ScheduleFetcher {
         .decode(type: Schedule.self, decoder: decoder)
         .receive(on: RunLoop.main)
     
-    func fetchSchedule(completion: @escaping (Schedule) -> Void) {
+    func fetchSchedule(completion: @escaping (Result<Schedule, Error>) -> Void) {
         schedulePublisher
-            .sink(receiveCompletion: { completion in
-                switch completion {
+            .sink(receiveCompletion: { c in
+                switch c {
                 case .finished:
                     break
                 case .failure(let error):
                     print("Received error: ", error)
+                    completion(.failure(error))
                 }
             }, receiveValue: { schedule in
-                completion(schedule)
                 print("Schedule: \(schedule)")
+                completion(.success(schedule))
             })
             .store(in: &observers)
     }

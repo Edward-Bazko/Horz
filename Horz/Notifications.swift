@@ -4,6 +4,7 @@ import UserNotifications
 class Notifications {
     private let notificationCenter = UNUserNotificationCenter.current()
     private let calendar = Calendar.autoupdatingCurrent
+    //private let quotes = QuotesStore()
     
     func requestAuthorization(completion: @escaping (Bool) -> Void) {
         // printPendingRequests()
@@ -30,17 +31,21 @@ class Notifications {
     }
     
     private func scheduleStartSession(date: Date) {
-        schedule(message: "Yo! Let's speak some English 🇬🇧💂🏻", date: date)
+        schedule(message: "Yo! Let's speak some English 🇬🇧💂🏻",
+                 body: "", // quotes.randomEnglishQuote().text,
+                 date: date)
     }
     
     private func scheduleFinishSession(date: Date) {
-        schedule(message: "Чокаво! Поговорим по-русски 🪆☦️", date: date)
+        schedule(message: "Чокаво! Поговорим по-русски 🪆☦️",
+                 body: "", //quotes.randomRussianQuote().text,
+                 date: date)
     }
         
-    private func schedule(message: String, date: Date) {
+    private func schedule(message: String, body: String, date: Date) {
         let content = UNMutableNotificationContent()
         content.title = message
-        content.body = "Motivation quote goes here ;)"
+        content.body = body
         content.sound = .default
         
         let dateComponents = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)

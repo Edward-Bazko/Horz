@@ -13,6 +13,8 @@
 		0B38782225C72C1200ABCB71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B38782125C72C1200ABCB71 /* Preview Assets.xcassets */; };
 		0B38782B25C72C3B00ABCB71 /* ScheduleFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38782A25C72C3B00ABCB71 /* ScheduleFetcher.swift */; };
 		0B38782F25C7334700ABCB71 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38782E25C7334700ABCB71 /* Notifications.swift */; };
+		0BE1E3DD25D06495006705C9 /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE1E3DC25D06495006705C9 /* Quotes.swift */; };
+		0BE1E3E025D0652F006705C9 /* MaxPayneQuotes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0BE1E3DF25D0652F006705C9 /* MaxPayneQuotes.txt */; };
 		2B5798B425CEEA9E007C7397 /* ScheduleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5798B325CEEA9E007C7397 /* ScheduleStore.swift */; };
 		2B5798B825CEEDE5007C7397 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5798B725CEEDE5007C7397 /* ScheduleViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +28,8 @@
 		0B38782325C72C1200ABCB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B38782A25C72C3B00ABCB71 /* ScheduleFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleFetcher.swift; sourceTree = "<group>"; };
 		0B38782E25C7334700ABCB71 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		0BE1E3DC25D06495006705C9 /* Quotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
+		0BE1E3DF25D0652F006705C9 /* MaxPayneQuotes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MaxPayneQuotes.txt; sourceTree = "<group>"; };
 		2B5798B325CEEA9E007C7397 /* ScheduleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleStore.swift; sourceTree = "<group>"; };
 		2B5798B725CEEDE5007C7397 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,9 +70,11 @@
 				2B5798B725CEEDE5007C7397 /* ScheduleViewModel.swift */,
 				2B5798B325CEEA9E007C7397 /* ScheduleStore.swift */,
 				0B38782E25C7334700ABCB71 /* Notifications.swift */,
+				0BE1E3DC25D06495006705C9 /* Quotes.swift */,
 				0B38781E25C72C1200ABCB71 /* Assets.xcassets */,
 				0B38782325C72C1200ABCB71 /* Info.plist */,
 				0B38782025C72C1200ABCB71 /* Preview Content */,
+				0BE1E3DF25D0652F006705C9 /* MaxPayneQuotes.txt */,
 			);
 			path = Horz;
 			sourceTree = "<group>";
@@ -140,6 +146,7 @@
 			files = (
 				0B38782225C72C1200ABCB71 /* Preview Assets.xcassets in Resources */,
 				0B38781F25C72C1200ABCB71 /* Assets.xcassets in Resources */,
+				0BE1E3E025D0652F006705C9 /* MaxPayneQuotes.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BE1E3DD25D06495006705C9 /* Quotes.swift in Sources */,
 				0B38782F25C7334700ABCB71 /* Notifications.swift in Sources */,
 				2B5798B825CEEDE5007C7397 /* ScheduleViewModel.swift in Sources */,
 				0B38782B25C72C3B00ABCB71 /* ScheduleFetcher.swift in Sources */,
