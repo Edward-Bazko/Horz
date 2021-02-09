@@ -60,7 +60,7 @@ class Notifications {
                 print("Failed to add notification with error: \(error)")
             }
             else {
-                print("Notification scheduled: \(request)")
+                // print("Notification scheduled: \(request)")
             }
         }
     }
