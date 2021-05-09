@@ -17,9 +17,21 @@
 		0BD4A67F25D3095B0009DA29 /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD4A67C25D3095B0009DA29 /* Quotes.swift */; };
 		0BD4A68025D3095B0009DA29 /* Chap.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0BD4A67D25D3095B0009DA29 /* Chap.txt */; };
 		0BFD4BC525D3074C008E5E35 /* UrbanDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD4BC425D3074C008E5E35 /* UrbanDictionary.swift */; };
+		2B1546FF26486B3A004F0446 /* HorzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1546FE26486B3A004F0446 /* HorzTests.swift */; };
+		2B154706264872E8004F0446 /* UrbanDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD4BC425D3074C008E5E35 /* UrbanDictionary.swift */; };
 		2B5798B425CEEA9E007C7397 /* ScheduleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5798B325CEEA9E007C7397 /* ScheduleStore.swift */; };
 		2B5798B825CEEDE5007C7397 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5798B725CEEDE5007C7397 /* ScheduleViewModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B15470126486B3A004F0446 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B38780F25C72C0F00ABCB71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B38781625C72C0F00ABCB71;
+			remoteInfo = Horz;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0B38781725C72C0F00ABCB71 /* Horz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Horz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,12 +46,22 @@
 		0BD4A67C25D3095B0009DA29 /* Quotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
 		0BD4A67D25D3095B0009DA29 /* Chap.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Chap.txt; sourceTree = "<group>"; };
 		0BFD4BC425D3074C008E5E35 /* UrbanDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrbanDictionary.swift; sourceTree = "<group>"; };
+		2B1546FC26486B3A004F0446 /* HorzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HorzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B1546FE26486B3A004F0446 /* HorzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorzTests.swift; sourceTree = "<group>"; };
+		2B15470026486B3A004F0446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B5798B325CEEA9E007C7397 /* ScheduleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleStore.swift; sourceTree = "<group>"; };
 		2B5798B725CEEDE5007C7397 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0B38781425C72C0F00ABCB71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B1546F926486B3A004F0446 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				0B38781925C72C0F00ABCB71 /* Horz */,
+				2B1546FD26486B3A004F0446 /* HorzTests */,
 				0B38781825C72C0F00ABCB71 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				0B38781725C72C0F00ABCB71 /* Horz.app */,
+				2B1546FC26486B3A004F0446 /* HorzTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,6 +117,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		2B1546FD26486B3A004F0446 /* HorzTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B1546FE26486B3A004F0446 /* HorzTests.swift */,
+				2B15470026486B3A004F0446 /* Info.plist */,
+			);
+			path = HorzTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,17 +146,38 @@
 			productReference = 0B38781725C72C0F00ABCB71 /* Horz.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2B1546FB26486B3A004F0446 /* HorzTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B15470526486B3A004F0446 /* Build configuration list for PBXNativeTarget "HorzTests" */;
+			buildPhases = (
+				2B1546F826486B3A004F0446 /* Sources */,
+				2B1546F926486B3A004F0446 /* Frameworks */,
+				2B1546FA26486B3A004F0446 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B15470226486B3A004F0446 /* PBXTargetDependency */,
+			);
+			name = HorzTests;
+			productName = HorzTests;
+			productReference = 2B1546FC26486B3A004F0446 /* HorzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		0B38780F25C72C0F00ABCB71 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					0B38781625C72C0F00ABCB71 = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					2B1546FB26486B3A004F0446 = {
+						CreatedOnToolsVersion = 12.5;
 					};
 				};
 			};
@@ -141,6 +195,7 @@
 			projectRoot = "";
 			targets = (
 				0B38781625C72C0F00ABCB71 /* Horz */,
+				2B1546FB26486B3A004F0446 /* HorzTests */,
 			);
 		};
 /* End PBXProject section */
@@ -154,6 +209,13 @@
 				0B38781F25C72C1200ABCB71 /* Assets.xcassets in Resources */,
 				0BD4A68025D3095B0009DA29 /* Chap.txt in Resources */,
 				0BD4A67E25D3095B0009DA29 /* MaxPayneQuotes.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B1546FA26486B3A004F0446 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +237,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2B1546F826486B3A004F0446 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B154706264872E8004F0446 /* UrbanDictionary.swift in Sources */,
+				2B1546FF26486B3A004F0446 /* HorzTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B15470226486B3A004F0446 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B38781625C72C0F00ABCB71 /* Horz */;
+			targetProxy = 2B15470126486B3A004F0446 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0B38782425C72C1200ABCB71 /* Debug */ = {
@@ -340,6 +419,44 @@
 			};
 			name = Release;
 		};
+		2B15470326486B3A004F0446 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KLA3MMY44C;
+				INFOPLIST_FILE = HorzTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.edwardbazko.HorzTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B15470426486B3A004F0446 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KLA3MMY44C;
+				INFOPLIST_FILE = HorzTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.edwardbazko.HorzTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -357,6 +474,15 @@
 			buildConfigurations = (
 				0B38782725C72C1200ABCB71 /* Debug */,
 				0B38782825C72C1200ABCB71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B15470526486B3A004F0446 /* Build configuration list for PBXNativeTarget "HorzTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B15470326486B3A004F0446 /* Debug */,
+				2B15470426486B3A004F0446 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
