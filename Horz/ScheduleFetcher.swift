@@ -6,7 +6,7 @@ protocol ScheduleFetching {
 }
 
 class ScheduleFetcher: ScheduleFetching {
-    private let scheduleURL = URL(string: "http://82.161.151.207:8082/schedule")!
+    private let scheduleURL = URL(string: "http://178.128.249.118:8082/schedule")!
     
     private lazy var schedulePublisher = URLSession.shared
         .dataTaskPublisher(for: scheduleURL)

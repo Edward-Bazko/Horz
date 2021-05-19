@@ -5,6 +5,7 @@ class Notifications {
     private let notificationCenter = UNUserNotificationCenter.current()
     private let calendar = Calendar.autoupdatingCurrent
     private let quotes = QuotesStore()
+    private let ud = UrbanDictionary()
     
     func requestAuthorization(completion: @escaping (Bool) -> Void) {
         notificationCenter.getNotificationSettings { [weak self] settings in
@@ -30,9 +31,27 @@ class Notifications {
     }
     
     private func scheduleStartSession(date: Date) {
-        schedule(message: "Yo! Let's speak some English 🇬🇧💂🏻",
-                 body: quotes.randomEnglishQuote().text,
-                 date: date)
+        ud.fetchRandomWord { [weak self] result in
+            guard let self = self else { return }
+            let term = try? result.get()
+            
+            let body = self.removeBrackets(term?.definition ?? self.quotes.randomEnglishQuote().text)
+            let example = self.removeBrackets(term?.example ?? "")
+            
+            self.schedule(message: term?.word ?? "Yo! Let's speak some English 🇬🇧💂🏻",
+                          body: body + " :: " + example,
+                          date: date)
+        }
+    }
+    
+    private func removeBrackets(_ string: String) -> String {
+        string
+            .replacingOccurrences(of: "[", with: "")
+            .replacingOccurrences(of: "]", with: "")
+            .replacingOccurrences(of: "\\r", with: "")
+            .replacingOccurrences(of: "\\n", with: "")
+            .replacingOccurrences(of: "\\\"", with: "\"")
+            .replacingOccurrences(of: "\\'", with: "'")
     }
     
     private func scheduleFinishSession(date: Date) {
